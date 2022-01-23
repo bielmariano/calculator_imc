@@ -16,8 +16,8 @@ class _CalculatorPageState extends State<CalculatorPage> {
   void _resetFields() {
     heightContoller.clear();
     weightController.text = '';
-    textInfo = 'Informa seus dados'
-;  }
+    textInfo = 'Informa seus dados';
+  }
 
   void _calculaImc() {
     double height = double.parse(heightContoller.text) / 100;
@@ -48,18 +48,21 @@ class _CalculatorPageState extends State<CalculatorPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).primaryColor,
-        centerTitle: true,
-        leading: Image.asset('assets/images/logo_home.png'),
-        title: Text('Calculadora IMC'),
+        leading: Container(
+          child: Image.asset('assets/images/logo_home.png'),
+        ),
+        title: Container(
+child: Text('Calculadora IMC')),
         actions: [
-          GestureDetector(
-              onTap: () {
-                _resetFields();
-                setState(() {
-                  
-                });
-              },
-              child: Icon(Icons.restart_alt))
+          Container(
+            margin: EdgeInsets.only(right: 20),
+            child: GestureDetector(
+                onTap: () {
+                  _resetFields();
+                  setState(() {});
+                },
+                child: Icon(Icons.restart_alt)),
+          )
         ],
       ),
       body: Center(
