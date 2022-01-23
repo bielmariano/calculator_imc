@@ -1,3 +1,4 @@
+import 'package:calculadora_imc/pages/login_page/widgets/custom_text_field_widget.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -34,44 +35,12 @@ class _LoginPageState extends State<LoginPage> {
                 style: TextStyle(fontSize: 24, color: Colors.white),
               ),
               Container(
-                margin: EdgeInsets.only(top: 67),
-                width: 300,
-                height: 50,
-                child: TextField(
-                  decoration: InputDecoration(
-                    hintText: 'usuário',
-                    hintStyle: TextStyle(color: Color(0XFF767676)),
-                    filled: true,
-                    fillColor: Colors.white,
-                    contentPadding: EdgeInsets.fromLTRB(30, 20, 20, 20),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(25),
-                      borderSide: BorderSide(color: Colors.white),
-                    ),
-                  ),
-                ),
-              ),
+                  margin: EdgeInsets.only(top: 67),
+                  child: CustomTextFieldWidget(hintText: 'usuário')),
               SizedBox(
                 height: 20,
               ),
-              Container(
-                width: 300,
-                height: 50,
-                child: TextField(
-                  obscureText: true,
-                  decoration: InputDecoration(
-                    hintText: 'senha',
-                    hintStyle: TextStyle(color: Color(0XFF767676)),
-                    filled: true,
-                    fillColor: Colors.white,
-                    contentPadding: EdgeInsets.fromLTRB(30, 20, 20, 20),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(25),
-                      borderSide: BorderSide(color: Colors.white),
-                    ),
-                  ),
-                ),
-              ),
+              CustomTextFieldWidget(obscureText: true, hintText: 'senha'),
               SizedBox(
                 height: 20,
               ),

@@ -16,7 +16,8 @@ class _CalculatorPageState extends State<CalculatorPage> {
   void _resetFields() {
     heightContoller.clear();
     weightController.text = '';
-  }
+    textInfo = 'Informa seus dados'
+;  }
 
   void _calculaImc() {
     double height = double.parse(heightContoller.text) / 100;
@@ -54,6 +55,9 @@ class _CalculatorPageState extends State<CalculatorPage> {
           GestureDetector(
               onTap: () {
                 _resetFields();
+                setState(() {
+                  
+                });
               },
               child: Icon(Icons.restart_alt))
         ],
